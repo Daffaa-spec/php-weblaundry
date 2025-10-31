@@ -1,0 +1,529 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #667eea;
+  margin-right: 1rem;
+}
+
+.brand-text h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.brand-text span {
+  color: #ffd700;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.nav-right a.active {
+  border-bottom: 2px solid #ffd700;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-left h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-left .lead {
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.hero-cta button {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero-cta {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 2px solid #ffd700;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #ffd700;
+  color: #333;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+}
+
+.btn-outline:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.hero-right img {
+  width: 220px !important;
+  height: auto !important;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* Main Content */
+.main {
+  padding: 2rem;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-head h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.muted {
+  color: #666;
+}
+
+/* Form */
+.form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.service:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.service input {
+  margin-right: 1rem;
+}
+
+/* Efek penuh warna emas saat layanan dipilih */
+.service input[type="radio"]:checked + div {
+  background: #ffd700; /* warna emas penuh */
+  color: #333; /* teks kontras */
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+}
+
+.service input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.service input[type="radio"]:checked + div i,
+.service input[type="radio"]:checked + div .svc-title,
+.service input[type="radio"]:checked + div small {
+  color: #333;
+}
+
+/* Saat hover, kotak juga berkilau emas */
+.service:hover {
+  background: rgba(255, 215, 0, 0.4);
+  border-color: #ffd700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Receipt */
+.receipt {
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.empty {
+  text-align: center;
+  color: #ffffff;
+}
+
+.result-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.card-head h3 {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* biar teks lebih tegas */
+}
+
+.card-head .muted {
+  color: #e5e5e5;
+}
+
+.struk {
+  color: #fff; /* semua teks di dalam struk jadi putih */
+}
+
+.struk h4,
+.struk p,
+.struk strong,
+.struk small {
+  color: #ffd700; /* pastikan teks tebal, kecil, dan paragraf juga putih */
+}
+/* --- Area hasil struk --- */
+#hasil {
+  background: rgba(255, 255, 255, 0.1);
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Tombol di bawah struk --- */
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-ghost {
+  background: #ffd700; /* warna emas */
+  color: #333;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: #ffea70; /* warna emas lebih terang saat hover */
+  transform: translateY(-2px);
+}
+
+/* --- Tampilan Struk (versi abu terang elegan) --- */
+.struk {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.struk h4 {
+  color: #ffffff; /* judul tetap putih */
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.struk .row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 0;
+}
+
+.struk strong {
+  color: #e0e0e0; /* abu terang: rapi dan profesional */
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.struk span {
+  color: #ffffff;
+  text-align: right;
+}
+
+.struk small {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* === Section Layanan & Kontak === */
+.section h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.contact-info i {
+  width: 24px;
+  height: 24px;
+  color: #e0e0e0;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer strong {
+  color: #fff;
+}
+
+.footer .muted {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+}
+
+/* Scroll halus */
+html {
+  scroll-behavior: smooth;
+}
+
+.card #hasil .empty {
+  color: #ffffff !important; /* ubah teks jadi putih */
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.9;
+}
